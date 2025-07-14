@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Menú  Tienda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta name="viewport" content="width=1500">
+
+    <style>
+       body {
+            
+            background-color: aliceblue;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-attachment: scroll;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        header {
+             position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.944);
+    padding: 15px 40px;
+            
+        }
+
+        nav {
+            flex: 1;
+            display: flex;
+            justify-content: center; /* centra horizontalmente */
+        }
+
+        nav ul {
+            display: flex;
+            gap: 90px;
+            list-style: none;
+            margin-right: 10%;
+            padding: 0;
+        }
+
+        /*header {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* centra verticalmente */
+           /* background-color: rgba(0, 0, 0, 0.663);
+            padding: 10px 20px;
+            gap: 50px; /* Espacio entre logo y menú */
+       /* }*/
+
+        #mi_logo {
+            width: 7%;
+            height: 7%;
+            border-radius: 20%;
+            object-fit: cover;
+            
+        }
+
+       /* nav ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            align-items: center;
+            text-align: center;
+        }*/
+
+        .logoWpp {
+  width: 80%;
+  height: 80%;
+}
+       nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px; /* Espacio uniforme entre los ítems */
+    flex-wrap: wrap; /* Permite que baje de línea si no entra */
+}
+
+nav ul li a {
+    font-size: 100%; /* bajamos un poco para que entre mejor */
+    color: aliceblue;
+    text-decoration: none;
+    padding: 0px;
+    white-space: nowrap; /* para que no se corte en 2 líneas */
+    gap:20px;
+}
+
+        #ImgPrincipal{
+            width: 100%;      /* Ocupa todo el ancho de la pantalla */
+            height: 500px;
+            object-fit: cover; /* o 'contain' */
+
+        }
+
+
+        .SubTitulo{
+         display: inline-block;             /* <-- Cambiamos a inline-block */
+  margin: 40px auto;                 /* centrado vertical */
+  padding: 1% 4%;                    /* espaciado interno */
+  background: rgba(29,31,32,.9);
+  color: aliceblue;
+  font-size: clamp(2.2rem, 4vw, 5rem);
+  border-radius: 15px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,.25);
+  text-align: center;
+
+  /* Para centrarlo en pantalla aunque sea inline-block */
+  display: table;                    /* opción alternativa a inline-block */
+  margin-left: auto;
+  margin-right: auto;
+        }
+        /*.SubTitulo{
+            display: inline-block;
+            /*justify-content: center;*/
+           /* margin-left: 43%;
+            background-color: rgba(29, 31, 32, 0.886);
+            padding: 1% 4%;
+            font-size: 200%;
+            border-radius: 15px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+            color: aliceblue;
+            max-width: 200%;
+            max-height: 200%;
+        }*/
+
+        .FotosCamperas{
+            position: relative;
+            background-color: rgba(223, 223, 223, 0.459);
+            border-radius: 20px;
+            max-width: 100%;
+            max-height:100%;
+            border: 3px solid ;
+            padding: 1%;
+            object-fit: cover;
+        }
+
+        .imgCampera{
+            max-width: 100%;
+            max-height: 100%; 
+            object-fit: cover;
+            
+        }
+
+        .imgCartera{
+            max-width: 80%;
+            max-height: 80%; 
+            object-fit: cover;
+            margin-top: 3%;
+            padding: 5%;
+        }
+
+        figcaption,figure{
+            text-align: center;
+            
+        }
+
+
+        .IdCamperas{
+            display: flex;          /* activa el modo fila  */
+            flex-wrap: wrap;        /* que salten de línea si no entran      */
+            gap: 20px;              /* espacio entre figuras                 */
+            justify-content: center;/* centrado horizontal opcional          */
+        }
+
+        .FotoKitInvierno{
+           /* max-width: 60%;
+            max-height: 60%;
+            border: 3px solid ;*/
+
+    max-width: 85%;
+    width: 85%;
+    height: auto;
+    border: solid rgb(255, 255, 255);
+
+
+        }
+
+    /*    .figureKitInivierno{
+            .figureKitInivierno {
+    border: 5px solid #000000;
+    max-width: 90%;
+    flex: 1 1 340px;
+    box-sizing: border-box;
+}
+        }*/
+
+    /*    .figureKitInivierno{
+            border: 5px solid #000000;
+    max-width: 200%;
+
+        }*/
+        #KitInvierno{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px; /* más espacio entre imágenes */
+            justify-content: center;
+            margin: 0;
+            /*padding: 20px;*/
+        }
+
+        .PKitInvierno{
+            background-color: rgba(0, 0, 0, 0.714);
+            color:aliceblue;
+            font-size: 89%;
+            padding: 2%;
+            border-radius:  15px;
+            text-align: center;
+
+        }
+
+        /*#KitInvierno .figureKitInivierno {
+            max-width: 100%;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }*/
+
+        .IdCarteras {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        #PieDePagina {
+            background-color: #000000cd; /* fondo negro */
+            color: #ffffff;            /* texto blanco */
+            /*padding: 20px 40px;*/
+            font-family: 'Arial', sans-serif;
+            text-align: center;        /* centrado general */
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+            width: 100%
+        }
+
+        #PieDePagina h2 {
+           /* margin-bottom: 15px;*/
+            font-size: 1.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #PieDePagina dl {
+            margin: 0 auto;
+            /*max-width: 400px;*/
+        }
+
+        #PieDePagina dt.SubTContacto {
+            font-weight: 700;
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+
+        #PieDePagina dd p, #PieDePagina p {
+            font-size: 1em;
+            /*margin: 8px 0 15px 0;*/
+            line-height: 1.4;
+        }
+
+        #PieDePagina a img {
+            vertical-align: middle;
+            margin-top: 10px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        #PieDePagina a img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Opcional: que el enlace tenga un poco de espacio debajo */
+        #PieDePagina a {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .Pcontacto{
+            margin:1%;
+            padding: 0;
+        }
+
+.linea {
+            border: none;
+            border-top: 4px solid rgba(0, 0, 0, 0.6); /* línea negra con transparencia */
+            width: 70%;
+            margin: 40px auto;
+        }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.933); /* un poco más oscuro para mejor contraste */
+    padding: 15px 40px;
+}
+
+#mi_logo {
+    width: 120px;    /* tamaño fijo, más grande */
+    height: auto;    /* que mantenga proporción */
+    border-radius: 20%;
+    object-fit: contain;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px; /* espacio entre links aumentado */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    font-size: 2rem;  /* tamaño de fuente más grande y legible */
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #FFD700; /* color dorado al pasar el mouse para visibilidad */
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+}
+
+figcaption{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:  200% ;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    padding: 4%;
+}
+
+.boton-wsp {
+            position:static;
+            bottom: 20px;
+            right: 100%;
+            width: 100%;
+            margin-bottom: 10%;
+        }
+
+.sin-stock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(128, 128, 128, 0.6); /* gris semitransparente */
+  color: white;
+  font-size: 285%;
+  font-weight:bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.Fieldset {
+            border: 2px solid rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 5px;
+            background-color: #858383a5;
+            width: 90%;
+            max-width: 60%; /* opcional para limitar el tamaño */
+            margin: 20px auto; /* centrado horizontal y separación vertical */
+            text-align: center;
+            font-size: 2.9em;
+        }
+
+    .precio{
+        font-size: 180%;
+
+    }
+    </style>
+</head>
+
+<body>
+    <header id="Inicio">
+        <div>
+            <img src="Imagenes/pic1..png" id="mi_logo" alt="">
+        </div>
+        <nav>
+           <ul>
+                <li><a href="#TituloCamperas">Camperas</a></li>
+                <li><a href="#TituloCarteras">Carteras</a></li>
+                <li><a href="#TituloKit">Kit Invierno</a></li>
+                <li><a href="#Toallas">Toallas</a></li>
+                <li><a href="#PieDePagina">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div >
+        <img src="Imagenes/pic4.jpg" id="ImgPrincipal" alt="">
+    </div>
+    <p id="TituloCamperas" class="SubTitulo">Camperas</p>
+    <div  class="IdCamperas">
+            <figure class="FotosCamperas">
+                <img class="imgCampera" src="Imagenes/pic2.jpeg">
+                <figcaption><p class="precio">$45.000</p>
+Campera Puffer celeste reversible con capucha. Talle M. Diseño acolchado y moderno, ideal para los días fríos. Cuenta con cierre frontal completo y bolsillos laterales amplios. Capucha con interior de piel suave y abrigada.                </figcaption>
+            </figure>
+
+            <figure class="FotosCamperas">
+                <img class="imgCampera" src="Imagenes/pic3.jpg">
+                <figcaption><p class="precio">$40.000</p>
+Elegancia y abrigo en un solo diseño. Esta campera Talle P negra de acabado brillante estilo charol eleva cualquier look invernal. Cuenta con cierre frontal, una capucha remontable y esta forrada en piel suave. Ideal para los días fríos sin perder el glamour.               </figcaption>
+            </figure>
+
+            <figure class="FotosCamperas">
+                <img class="imgCampera" src="Imagenes/pic5.jpg">
+                <figcaption><p class="precio">$40.000</p>
+Abrigo Puffer azul Talle M con diseño único: detalles brillantes tipo gotitas que aportan estilo sin perder elegancia. Con cierre frontal, bolsillos amplios y puños con elástico para mejor ajuste. Ideal para los días fríos con un toque original. ¡Canchera, moderna y súper combinable!                </figcaption>
+            </figure>
+
+            <figure class="FotosCamperas">
+                <img class="imgCampera" src="Imagenes/pic6.png">
+                <figcaption><p class="precio">$45.000</p>
+                    Campera Puffer reversible. De un lado negra lisa y del otro negra con detalles de puntitos dorados. Talle M. Capucha desmontable y sin elástico en la cintura. ¡Abrigada y versátil!
+                </figcaption>
+            </figure>
+
+            <figure class="FotosCamperas">
+                <img class="imgCampera" src="Imagenes/pic7.jpg">
+                <figcaption><p class="precio">$40.000</p>
+Estilo urbano y moderno para el invierno. Esta campera negra con diseño brillante tipo salpicado Talle GG, te asegura un look original. Tiene cierre completo, bolsillos laterales y puños elásticos que retienen el calor. Ideal para combinar con cualquier outfit. ¡Abrigate con estilo!                </figcaption>
+            </figure>
+    </div>
+    <hr class="linea">
+    <p id="TituloCarteras" class="SubTitulo">Carteras</p>
+    <p class="PKitInvierno">Tenemos carteras pensadas para que te acompañen en tu rutina. Cómodas, livianas y con el espacio justo para llevar lo que necesitás.!</p>
+    <div class="IdCarteras">
+        <figure class="FotosCamperas">
+                <img class="imgCartera" src="Imagenes/pic17.jpeg">
+                <figcaption><p class="precio">$37.000</p>
+                    Esta cartera es súper práctica: tiene un cierre interno para mayor seguridad y otro en la parte trasera para guardar lo que 
+                    necesitás tener a mano. Viene con dos detalles colgantes que le dan un toque especial y, además, es muy espaciosa por dentro, 
+                    ideal para llevar todo lo necesario en el día a día.
+                </figcaption>
+        </figure>
+
+        <figure class="FotosCamperas">
+                <img class="imgCartera"  src="Imagenes/pic18.jpeg">
+                <div class="sin-stock">Sin Stock</div>
+
+                <figcaption>
+                    Esta cartera tiene un cierre central en el interior, bolsillos y un compartimento con cierre más pequeño para organizar mejor
+                     tus cosas. También cuenta con un cierre en la parte trasera, ideal para lo que necesitás tener a mano. En el frente, se 
+                     destacan dos colgantes que le aportan un detalle delicado y original.
+                </figcaption>
+        </figure>
+        <figure class="FotosCamperas">
+                <img class="imgCartera" src="Imagenes/pic19 (1).jpeg">
+                <figcaption><p class="precio">$10.000</p>
+                    Este modelo cuenta con tarjeteros externos para un acceso rápido, un compartimento interno con cierre ideal para monedas u objetos pequeños, y espacio amplio y ordenado para billetes y documentos.
+                </figcaption>
+        </figure>
+    </div>
+    <br>
+    
+    <hr class="linea">
+    <p id="TituloKit" class="SubTitulo">Kit Invierno</p>
+    <p class="PKitInvierno">Este kit de invierno incluye todo lo que necesitás para disfrutar de noches cálidas y confortables: 
+     un acolchado Queen, su juego de sábanas combinado, funda de almohada y cortinas haciendo juego. ¡Preparate para pasar el invierno 
+     con estilo y comodidad!</p>
+    <div id="KitInvierno">
+        <figure class="FotosCamperas">
+        <img class="imgCartera" src="Imagenes/pic8.png">
+        <figcaption><p class="precio">$95.000</p></figcaption>
+        </figure>
+
+        <figure class="FotosCamperas">
+        <img class="imgCartera" src="Imagenes/pic9.png">
+        <figcaption><p class="precio">$95.000</p></figcaption>
+        </figure>
+
+        <figure class="FotosCamperas">
+        <img class="imgCartera" src="Imagenes/pic10.png">
+        <figcaption><p class="precio">$95.000</p></figcaption>
+        </figure>
+
+        <figure class="FotosCamperas">
+        <img class="imgCartera" src="Imagenes/pic11.png">
+        <figcaption><p class="precio">$95.000</p></figcaption>
+        </figure>
+
+        <figure class="FotosCamperas">
+        <img class="imgCartera" src="Imagenes/pic12.png">
+        <figcaption><p class="precio">$95.000</p></figcaption>
+        </figure>
+
+        <figure class="FotosCamperas">
+        <img class="imgCartera" src="Imagenes/pic13.png">
+        <figcaption><p class="precio">$95.000</p></figcaption>
+        </figure>
+
+        <figure class="FotosCamperas">
+        <img class="imgCartera" src="Imagenes/pic14.png">
+        <figcaption><p class="precio">$95.000</p></figcaption>
+        </figure>
+
+        <figure class="FotosCamperas">
+        <img class="imgCartera" src="Imagenes/pic15.png">
+        <figcaption><p class="precio">$95.000</p></figcaption>
+        </figure>
+
+        <figure class="FotosCamperas">
+        <img class="imgCartera" src="Imagenes/pic16.png">
+        <figcaption><p class="precio">$95.000</p></figcaption>
+        </figure>
+        
+    </div>
+
+    <hr class="linea">
+    <p id="TituloKit" class="SubTitulo">Toallas x3</p>
+    <p class="PKitInvierno">Las toallas Goldsun x3 de secado rápido son ligeras, absorbentes y se secan en minutos. Perfectas para el gimnasio, la playa o el hogar. ¡Comodidad y frescura en cada uso!</p>
+  
+      <div id="Toallas">
+        <figure class="FotosCamperas">
+          <img class="imgCartera" src="Imagenes/toalla1..png" alt="Toalla 1">
+         <figcaption><p class="precio">$18.000</p></figcaption>
+        </figure>
+        <figure class="FotosCamperas">
+          <img class="imgCartera" src="Imagenes/toalla2..png" alt="Toalla 2">
+          <figcaption><p class="precio">$18.000</p></figcaption>
+        </figure>
+        <figure class="FotosCamperas">
+          <img class="imgCartera" src="Imagenes/toalla3.png" alt="Toalla 3">
+          <figcaption><p class="precio">$18.000</p></figcaption>
+        </figure >
+        <figure class="FotosCamperas">
+          <img class="imgCartera" src="Imagenes/toalla4.png" alt="Toalla 4">
+          <figcaption><p class="precio">$18.000</p></figcaption>
+        </figure>
+        <figure class="FotosCamperas">
+          <img class="imgCartera" src="Imagenes/toalla5.png" alt="Toalla 5">
+          <figcaption><p class="precio">$18.000</p></figcaption>
+        </figure>
+
+        <div>
+        <fieldset class="Fieldset">
+            <legend class="medidasToallas"><strong>Medidas de la Toalla Grande:</strong></legend>
+            <ul>
+                <li><strong>Ancho:</strong> 70 cm</li>
+                <li><strong>Largo:</strong> 1,40 m</li>
+            </ul>
+        </fieldset>
+
+        <fieldset class="Fieldset">
+            <legend class="medidasToallas"><strong>Medidas de la Toalla Mediana:</strong></legend>
+                <ul>
+                    <li><strong>Ancho:</strong> 46,5 cm</li>
+                    <li><strong>Largo:</strong> 77 cm</li>
+                </ul>
+        </fieldset>
+
+        <fieldset class="Fieldset">
+            <legend class="medidasToallas"><strong>Medidas de la Toalla Chica:</strong></legend>
+                <ul>
+                    <li><strong>Ancho:</strong> 31 cm</li>
+                    <li><strong>Largo:</strong> 46 cm</li>
+                </ul>
+        </fieldset>
+        </section>
+        </div>
+      <hr class="linea">
+
+     <footer id="PieDePagina">
+                <section>
+                    <h2>Contacto</h2>
+                    <dl class="alt">
+                        <dt class="SubTContacto">📞Telefono</dt>
+                        <P class="Pcontacto">Si querés saber más acerca de los productos o realizar una compra, presioná el ícono de WhatsApp.</P>
+                        <a href="https://wa.me/5491164775827?text=Hola%20me%20interesa%20tu%20producto" target="_blank">
+                            <img src="Imagenes/ft1.png" alt="Chat con vendedor" class="boton-wsp">
+                        </a>
+                        <br>
+
+                        <dt class="SubTContacto">📬Localidad- Don Torcuato</dt>
+                        <dd>
+                            <p class="Pcontacto">Hacemos punto de encuentro por la zona de Torcuato.</p>
+                        </dd>          
+                        <br>
+                    
+                    
+                    </dl>
+                </section>
+            </footer>
+
+            
+</body>
+</html>
